@@ -241,6 +241,12 @@ body {
 /* RODAPÉ */
 
 .rodape__container {
+    display: flex;
+    
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    flex-flow: column wrap;
+
     width: 100%;
     height: 875px;
     color: var(--cinza-texto);
@@ -255,6 +261,10 @@ body {
     padding: 10px 0 20px 0;
 }
 
+.cabecalho__pesquisar__item{
+    display: none;
+}
+
 @media(min-width: 834px) {
 
     body {
@@ -267,12 +277,20 @@ body {
         font-size: 16px;
     }
 
+    .cabecalho__pesquisar__item{
+        display: block;
+    }
+
     .menu__lista {
         padding-top: 15px;
     }
 
     .menu__lista li {
         width: 100%;
+    }
+
+    .rodape__container {
+        justify-content: space-between;
     }
 
     /* ESTILOS DA SECAO SUPERIOR */
